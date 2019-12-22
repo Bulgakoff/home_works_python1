@@ -58,9 +58,9 @@ print(copy_qwe[::-1])  # это раз вариант просто реверс
 # user_str = input('enter strings :   ').split()
 # for i, item in enumerate(user_str):
 #     if len(user_str[i]) > 10:
-#         print(item[:9])
+#         print(f'№ {i} --- {item[:9]}')
 #     else:
-#         print(item)
+#         print(f'№ {i} --- {item}')
 
 # Реализовать структуру «Рейтинг», представляющую собой не возрастающий набор натуральных чисел.
 # У пользователя необходимо запрашивать новый элемент рейтинга.
@@ -71,6 +71,29 @@ print(copy_qwe[::-1])  # это раз вариант просто реверс
 # Пользователь ввел число 8. Результат: 8, 7, 5, 3, 3, 2.
 # Пользователь ввел число 1. Результат: 7, 5, 3, 3, 2, 1.
 # Набор натуральных чисел можно задать непосредственно в коде, например, my_list = [7, 5, 3, 3, 2].
+# u = int(input('enter number :  '))
+# my_list = [7, 5, 3, 3, 2]
+# print(f'оригинал {my_list}')
+# # for i in range(len(my_list)):
+# i = 0
+# while i < len(my_list):
+#     if u < min(my_list):
+#         my_list.append(u)
+#         print(my_list)  # в конец списка
+#         break
+#     elif u > max(my_list):
+#         my_list.insert(0, u)
+#         print(my_list)  # в начало в данный момент списка
+#         break
+#     elif u == my_list[i]:
+#         my_list.insert(i, u)
+#         print(my_list)
+#         break
+#     else:
+#         my_list.insert(i + 1, u)
+#         print(list(reversed(sorted(my_list))))# ;-)))))))))))))))) кручу верчу
+#         break
+#     i += 1
 
 # *Реализовать структуру данных «Товары». Она должна представлять собой список кортежей.
 # Каждый кортеж хранит информацию об отдельном товаре.
