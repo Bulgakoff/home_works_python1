@@ -1,117 +1,88 @@
-# 1 Создать список и заполнить его элементами различных типов данных.
-qwe = [12, 2.2, [1, 2, 3], {'name': 'Bob', 'age': 20}, 'string', (1, 2)]
-# Реализовать скрипт проверки типа данных каждого элемента.
-# Использовать функцию type() для проверки типа.
-# Элементы списка можно не запрашивать у пользователя, а указать явно, в программе.
-copy_qwe = qwe.copy()
-for item in copy_qwe:
-    print(type(item), end=' ')
-print()
-# Для списка реализовать обмен значений соседних элементов,---- НЕ ПОНЯЛ УСЛОВИЕ
-print(copy_qwe[::-1])  # это раз вариант просто реверс
-# т.е. Значениями обмениваются элементы с индексами 0 и 1, 2 и 3 и т.д.
-# При нечетном количестве элементов последний сохранить на своем месте.
-# Для заполнения списка элементов необходимо использовать функцию input().
-# my_list1 = input('enter list  :').split()
-# my_list2 = []  # [1, 3, 5]
-# my_list3 = []  # [0, 2, 4, 6]
-# for i in range(len(my_list1)):
-#     if i % 2 != 0:
-#         my_list2.append(my_list1[i])
-#     else:
-#         my_list3.append(my_list1[i])
-# my_list4 = list(zip(my_list2, my_list3))
-# if len(my_list2) > len(my_list3):
-#     my_list4.append(my_list2[-1])
-#     print(f'число элементов в исходном списке не четное : {my_list4}')
-# if len(my_list2) < len(my_list3):
-#     my_list4.append(my_list3[-1])
-#     print(f'число элементов в исходном списке  не четное : {my_list4}')
-# else:
-#     print(f'число элементов в исходном списке четное : {my_list4}')
-
-# Пользователь вводит месяц в виде целого числа от 1 до 12.
-# Сообщить к какому времени года относится месяц (зима, весна, лето, осень).
-# Напишите решения через list и через dict.
-# u = int(input('enter number :  '))
-# season_list = [[12, 1, 2], [3, 4, 5], [6, 7, 8], [9, 10, 11]]
-# if u in season_list[0]:
-#     print('winter')
-# elif u in season_list[1]:
-#     print('spring')
-# elif u in season_list[2]:
-#     print('Summer')
-# elif u in season_list[3]:
-#     print('Autumn')
-# season_dict = {'winter': (12, 1, 2), 'spring': (3, 4, 5), 'Summer': (6, 7, 8), 'Autumn': (9, 10, 11)}
-# if u in season_dict['winter']:
-#     print('winter')
-# elif u in season_dict['spring']:
-#     print('spring')
-# elif u in season_dict['Summer']:
-#     print('Summer')
-# elif u in season_dict['Autumn']:
-#     print('Autumn')
-
-# Пользователь вводит строку из нескольких слов, разделённых пробелами. Вывести каждое слово с новой строки.
-# Строки необходимо пронумеровать. Если в слово длинное, выводить только первые 10 букв в слове.
-# user_str = input('enter strings :   ').split()
-# for i, item in enumerate(user_str):
-#     if len(user_str[i]) > 10:
-#         print(f'№ {i} --- {item[:9]}')
-#     else:
-#         print(f'№ {i} --- {item}')
-
-# Реализовать структуру «Рейтинг», представляющую собой не возрастающий набор натуральных чисел.
-# У пользователя необходимо запрашивать новый элемент рейтинга.
-# Если в рейтинге существуют элементы с одинаковыми значениями,
-# то новый элемент с тем же значением должен разместиться после них.
-# Подсказка. Например, набор натуральных чисел: 7, 5, 3, 3, 2.
-# Пользователь ввел число 3. Результат: 7, 5, 3, 3, 3, 2.
-# Пользователь ввел число 8. Результат: 8, 7, 5, 3, 3, 2.
-# Пользователь ввел число 1. Результат: 7, 5, 3, 3, 2, 1.
-# Набор натуральных чисел можно задать непосредственно в коде, например, my_list = [7, 5, 3, 3, 2].
-# u = int(input('enter number :  '))
-# my_list = [7, 5, 3, 3, 2]
-# print(f'оригинал {my_list}')
-# # for i in range(len(my_list)):
-# i = 0
-# while i < len(my_list):
-#     if u < min(my_list):
-#         my_list.append(u)
-#         print(my_list)  # в конец списка
-#         break
-#     elif u > max(my_list):
-#         my_list.insert(0, u)
-#         print(my_list)  # в начало в данный момент списка
-#         break
-#     elif u == my_list[i]:
-#         my_list.insert(i, u)
-#         print(my_list)
-#         break
-#     else:
-#         my_list.insert(i + 1, u)
-#         print(list(reversed(sorted(my_list))))# ;-)))))))))))))))) кручу верчу
-#         break
-#     i += 1
-
-# *Реализовать структуру данных «Товары». Она должна представлять собой список кортежей.
+# 6 *Реализовать структуру данных «Товары». Она должна представлять собой список кортежей.
 # Каждый кортеж хранит информацию об отдельном товаре.
+
 # В кортеже должно быть два элемента — номер товара и словарь с параметрами
 # (характеристиками товара: название, цена, количество, единица измерения).
+
 # Структуру нужно сформировать программно, т.е. запрашивать все данные у пользователя.
-# Пример готовой структуры:
-# [
-#     (1, {“название”: “компьютер”, “цена”: 20000, “количество”: 5, “eд”: “шт.”}),
-#     (2, {“название”: “принтер”, “цена”: 6000, “количество”: 2, “eд”: “шт.”}),
-#     (3, {“название”: “сканер”, “цена”: 2000, “количество”: 7, “eд”: “шт.”})
-# ]
+
 # Необходимо собрать аналитику о товарах. Реализовать словарь, в котором каждый ключ — характеристика товара,
 # например название, а значение — список значений-характеристик, например список названий товаров.
 # Пример:
-# {
-#     “название”: [“компьютер”, “принтер”, “сканер”],
-#     “цена”: [20000, 6000, 2000],
-#     “количество”: [5, 2, 7],
-#     “ед”: [“шт.”]
+# my_dict = {
+#     'название': ['компьютер', 'принтер', 'сканер'],
+#     'цена': [20000, 6000, 2000],
+#     'количество': [5, 2, 7],
+#     'eд': ['шт.']
 # }
+
+
+def goods_dict(d):
+    dict_comp = {}
+    for i in range(d):
+        k = input('enter key :  ')
+        if k == '':
+            print('Error - enter correct key!!!')
+            continue
+        v = input('enter value :  ')
+        if v == '':
+            print('Error - enter correct value!!!')
+            continue
+        dict_comp[k] = v
+
+    return dict_comp
+
+
+res_goods_dict = goods_dict(3)
+print(f'==создание словаря в списке ==={res_goods_dict}')
+
+
+def create_list(qwe):
+    list_my = []
+    for i in range(1, qwe):
+        internal = []
+        for j in range(qwe - 2):
+            internal.append(i)
+            internal.append(goods_dict(1))
+        list_my.append(internal)
+    return list_my
+
+
+res_create_list = create_list(3)
+
+
+# print(res_create_list)  # [[1, {'название': 'компьютер'}], [2, {'название': 'принтер'}]]
+def to_tuple(qw):  #
+    list_with_tuple = []
+    for p in qw:
+        list_with_tuple.append(tuple(p))
+    return list_with_tuple
+
+
+res_to_tuple = to_tuple(res_create_list)
+print(
+    f'>>>перевод в кортеж элементы списка>>>>>>{res_to_tuple}')
+# [(1, {'название': 'компьютер'}), (2, {'название': 'принтер'})]
+
+def frm_dict_to_dict(rgd):
+    mdict = {}
+
+    for i in range(len(rgd)):
+        k = input('enter key :  ')
+        if k == '':
+            print('Error - enter correct key!!!')
+            continue
+        lv = []
+        for j in range(3):
+            uv = input('Enter value for data analyst  :')
+            if uv == '':
+                print('Error - enter correct value!!!')
+                continue
+            lv.append(uv)
+        mdict[k] = lv
+
+    return mdict
+
+
+res_frm_dict_to_dict = frm_dict_to_dict(res_goods_dict)
+print(f'-----{res_frm_dict_to_dict}')
