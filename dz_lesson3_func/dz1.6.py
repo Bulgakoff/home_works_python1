@@ -4,3 +4,14 @@
 # Продолжить работу над заданием. В программу должна попадать строка из слов, разделенных пробелом.
 # Каждое слово состоит из латинских букв в нижнем регистре. Сделать вывод исходной строки,
 # но каждое слово должно начинаться с заглавной буквы. Необходимо использовать написанную ранее функцию int_func().
+latin = input("enter latin word : ")
+print(latin)
+
+
+def int_func(word_or_phrase):
+    result = word_or_phrase.title()
+    return result
+
+
+res_int_func = int_func(latin)
+print(f'res_int_func===={res_int_func}')

@@ -17,12 +17,12 @@ def sum_num_str():
         i = 0
         while i < len(ns):
             if ns[i] == 'x':
-                result = result + sum(str_new)
+                result += sum(str_new)
                 return result
             ns[i] = int(ns[i])
             str_new.append(ns[i])
             i += 1
-        result = result + sum(str_new)
+        result += sum(str_new)
         print(result)
 
 

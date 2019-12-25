@@ -11,7 +11,6 @@ def my_func1(x, y):
 res_my_func1 = my_func1(4, -2)
 print(f'res_my_func=======>{res_my_func1}')
 
-
 # Второй — более сложная реализация без оператора **, предусматривающая использование цикла.
 def my_func(x, y):
     c = x
