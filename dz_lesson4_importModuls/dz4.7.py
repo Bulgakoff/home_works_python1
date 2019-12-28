@@ -15,3 +15,14 @@ def fact(n):
 
 for el in fact(4):
     print(el)
+
+# /////////////////////////////////////////
+def fact(nn):
+    f = 1
+    for i in range(1, nn + 1):
+        f = i * f
+        yield f
+
+
+for el in fact(4):
+    print(el)
