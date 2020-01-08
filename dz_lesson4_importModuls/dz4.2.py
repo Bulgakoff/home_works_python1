@@ -7,9 +7,6 @@
 from functools import reduce
 
 begine_lst = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
-fin_lst = []
-for i in range(1, len(begine_lst)):
-    if begine_lst[i - 1] < begine_lst[i]:
-        fin_lst.append(begine_lst[i])
-fin_lst(fin_lst)  # fin_lst = [12, 44, 4, 10, 78, 123]
-# не разобрался как сделать генератором
+
+fin_lst = [begine_lst[i] for i in range(1, len(begine_lst)) if begine_lst[i - 1] < begine_lst[i]]
+print(fin_lst)  # fin_lst = [12, 44, 4, 10, 78, 123]
