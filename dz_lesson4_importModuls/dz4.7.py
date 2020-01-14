@@ -13,8 +13,12 @@ def fact(n):
         yield math.factorial(p)
 
 
-for el in fact(4):
-    print(el)
+res = list(fact(4))
+print(res)
+
+
+# for el in fact(4):
+#     print(el)
 
 # /////////////////////////////////////////
 def fact(nn):
