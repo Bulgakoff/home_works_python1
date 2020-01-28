@@ -26,37 +26,35 @@
 
 
 class Matrix:
-    def __init__(self, *args):
-        self.matr1 = [[31, 22], [37, 43], [51, 86]]
-        self.matr2 = [[3, 5, 32], [2, 4, 6], [-1, 64 - 8]]
-        self.matr3 = [[3, 5, 8, 3], [8, 3, 7, 1]]
+    def __init__(self, pasas):
+        self.matr1 = pasas
         self.mtr_com = []
-
-    def __str__(self):
-        if len(self.mtr_com) == 0:
-            return f'выводим только базовый аргумент  self.matr1 == {self.matr1}'
-        else:
-            return f'складываем две матрицы {self.matr1} + {self.matr2}--------> {self.mtr_com}'
 
     def __add__(self, other):
         try:
             for i in range(len(self.matr1)):
                 inter = []
                 for j in range(len(self.matr1[i])):
-                    inter.append(self.matr1[i][j] + other[i][j])
+                    inter.append(self.matr1[i][j] + other.matr1[i][j])
                 self.mtr_com.append(inter)
-        except IndexError as w:
+            return self.mtr_com
+        except IndexError as q:
             print(f' нужна одна длина списков или размер базового аргумента  self.matr1 '
-                  f'должен быть меньше другого  {w}')
+                  f'должен быть меньше другого {q}')
+
+    def __str__(self):
+        if len(self.mtr_com) == 0:
+            return f'выводим только базовый аргумент  self.matr1 == {self.matr1}'
+        else:
+            return f'складываем две матрицы {self.matr1} --------> {self.mtr_com}'
 
 
-mat3_2 = [[31, 22], [37, 43], [51, 86]]
-mat3_3 = [[3, 5, 32], [2, 4, 6], [-1, 64 - 8]]
-mat2_4 = [[3, 5, 8, 3], [8, 3, 7, 1]]
+mat3_2 = [[1, 1], [4]]
+mat2_4 = [[1, 1], [1, 2], [23, 7, 1]]
 
-lstlst_1 = Matrix(mat3_2, mat3_3, mat2_4)
+lstlst_1 = Matrix(mat3_2)
 print(lstlst_1)
-
+lstlst_2 = Matrix(mat2_4)
 # ///////////сложение матриц ////////////////
-lstlst_1 + mat2_4
-print(lstlst_1)
+qwe = lstlst_1 + lstlst_2
+print(qwe)
