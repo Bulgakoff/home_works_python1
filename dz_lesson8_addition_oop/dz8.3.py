@@ -21,10 +21,10 @@ class Own_ex(Exception):
 
 lst_nums_text = []
 while True:
-    user_dates = input('>> число >>>>>  ')
+    user_dates = input('>>введите число >>>>> : ')
     lst_nums_text.append(user_dates)
-    if user_dates == 's':
-        lst_nums_text.remove('s')
+    if user_dates == 'stop':
+        lst_nums_text.remove('stop')
         break
 print(lst_nums_text)
 lst_nums_only = []
